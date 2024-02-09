@@ -1,0 +1,2 @@
+com.sam.keycloak.authenticator.SecretQuestionRequiredActionFactory
+com.sam.keycloak.sms2fa.requiredaction.MobileNumberRequiredActionFactory

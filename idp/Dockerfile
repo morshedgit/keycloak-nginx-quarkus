@@ -1,14 +1,10 @@
 # Use the Keycloak image as the builder stage to enable health, metrics, and configure the database
 FROM quay.io/keycloak/keycloak:22.0.5 as builder
 
-# Configure a database vendor
-ENV KC_DB=postgres
-
 WORKDIR /opt/keycloak
 
 # Add custom providers or modules here. For example, copying custom providers to the deployments directory
-# COPY ./Keycloak/CustomProviders/providers/*.jar /opt/keycloak/providers/
-
+ADD --chown=keycloak:keycloak ./sms-authenticator/target/*.jar /opt/keycloak/providers/
 # Build the Keycloak server with the custom providers
 RUN /opt/keycloak/bin/kc.sh build
 

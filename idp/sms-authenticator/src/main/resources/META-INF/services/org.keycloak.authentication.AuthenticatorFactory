@@ -1,0 +1,3 @@
+com.sam.keycloak.ipauthenticator.IPAuthenticatorFactory
+com.sam.keycloak.authenticator.SecretQuestionAuthenticatorFactory
+com.sam.keycloak.sms2fa.SmsAuthenticatorFactory
